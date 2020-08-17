@@ -1,0 +1,34 @@
+<div class="content" fxLayout="row" fxLayoutGap="5px grid" fxLayoutAlign="space-around center">
+  <img class="content-background" [src]="backdropUrl"/>
+  <div fxFlex="300px">
+    <mat-card>
+      <img class="card-image" [src]="posterUrl"/>
+    </mat-card>
+  </div>
+  <div fxFlex="75%">
+    <mat-card class="card-text">
+      <mat-card-title>
+        <p class="line-clamp-title">{{ movie.title }}</p>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <p class="line-clamp-subtitle">{{ releaseDate }}</p>
+        <ul class="horizontal-list">
+          <li class="horizontal-list-item" *ngFor="let genre of movie.genres">
+            {{ genre.name }}
+          </li>
+        </ul>
+      </mat-card-subtitle>
+      <mat-card-subtitle>
+        <mat-icon>access_time</mat-icon>
+        <span class="text-with-icon">{{ movie.runtime }} m</span> 
+      </mat-card-subtitle>
+      <mat-card-content>
+        <p class="line-clamp">{{ movie.overview }}</p>
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-icon class="red-icon">favorite_icon</mat-icon>
+        <span class="text-with-icon">{{ movie.vote_average }}</span>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div>

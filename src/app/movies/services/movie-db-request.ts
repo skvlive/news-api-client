@@ -1,6 +1,6 @@
 import { HttpParams } from '@angular/common/http';
 
-export class NewsApiRequest {
+export class MovieDbRequest {
   url: string;
   params: HttpParams;
   constructor(url: string, params: HttpParams) {

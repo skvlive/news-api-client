@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <div style="overflow: hidden" fxFill Layout="row" fxLayoutAlign="space-between center" >
+      <h1>Movies DB </h1>
+    </div>
+</mat-toolbar>
+<mat-drawer-container class="container">
+  <mat-drawer-content>
+    <div class="content" fxFill *ngIf="movie$ | async as movie">
+      <app-movie-details [movie]="movie"></app-movie-details>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

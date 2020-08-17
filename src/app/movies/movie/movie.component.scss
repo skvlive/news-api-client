@@ -1,45 +1,53 @@
 .mat-elevation-z4.mat-card {
   display: flex;
   flex-direction: column;
-  height: 400px;
-  min-width: 280px;
+  height: 375px;
+  width: 180px;
   overflow-y: none;
   margin: 16px;
-  border-radius: 8px;
   overflow: hidden;
+  background: transparent;
+  transition: none;
+  box-shadow: none;
+  border-radius: 8px;
 }
 
 .card-image {
   display: block;
-  object-fit: cover;
+  object-fit: fill;
   object-position: top;
-  height: 200px;
+  height: 300px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .mat-card-title {
   font-size: 16px;
-  height: 64px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  color: grey;
+  height: 50px;
   margin: 0px;
 }
 
 .mat-card-content {
-  font-size: 14px;
-  height: 100px;
+  font-size: 12px;
+  height: 15px;
   margin: 0px;
   flex-grow: 1;
-  overflow: auto;
+  color: grey;
 }
 
 .line-clamp-title {
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   overflow: hidden;
   -webkit-box-orient: vertical;
+  cursor: pointer;
 }
 
 .line-clamp {
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   overflow: hidden;
   -webkit-box-orient: vertical;
 }
@@ -57,9 +65,23 @@
 }
 
 .mat-card-footer {
-  font-size: 12px;
-  padding: 0px;
+  font-size: 14px;
   margin-left: 0px;
   margin-bottom: 0px;
-  height: 16px;
+  height: 20px;
+  right: -10px;
+  flex-direction: row;
+}
+
+.red-icon {
+  color: #920303;
+}
+
+.text-with-icon{
+  margin-left: 5px; 
+  margin-bottom: 5px;
+  font-family: 'Seg oe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color:grey;
 }

@@ -1,5 +1,5 @@
 {
-  "name": "news-api-client",
+  "name": "movie-db-client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

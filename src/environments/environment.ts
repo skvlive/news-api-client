@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  newsApiUrl: 'https://newsapi.org/v2/',
+  movieDbUrl: 'https://api.themoviedb.org/3/',
+  imageUrl: 'https://image.tmdb.org/t/p/w500',
   apiKey: '<get_your_own_key>'
 };
 

@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <div style="overflow: hidden" fxFill Layout="row" fxLayoutAlign="space-between center" >
+    <h1>Movies DB </h1>
+    <button mat-button (click)="drawer.toggle()">
+      <mat-icon>settings_icon</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="drawer-container" hasBackdrop="true" mode="over" position="end"
+   closed (mouseleave)="drawer.close()">
+    <app-nav-list></app-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="content" fxLayout="row wrap" fxLayoutGap="5px grid" fxLayoutAlign="space-around stretch" stretch>
+      <div class="card" fxFlex="33%" fxFlex.xs="100%" fxFlex.sm="50%" fxFlex.lg="20%" fxFlex.gt-lg="20%"
+        *ngFor="let movieBanner of movieBanners$ | async; let i = index">
+        <app-movie [movieBanner]="movieBanner" [index]="i"></app-movie>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

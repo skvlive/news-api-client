@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "news-api-client": {
+    "movie-db-client": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/news-api-client",
+            "outputPath": "dist/movie-db-client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -92,21 +92,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "news-api-client:build"
+            "browserTarget": "movie-db-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "news-api-client:build:production"
+              "browserTarget": "movie-db-client:build:production"
             },
             "local": {
-              "browserTarget": "news-api-client:build:local"
+              "browserTarget": "movie-db-client:build:local"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "news-api-client:build"
+            "browserTarget": "movie-db-client:build"
           }
         },
         "test": {
@@ -144,16 +144,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "news-api-client:serve"
+            "devServerTarget": "movie-db-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "news-api-client:serve:production"
+              "devServerTarget": "movie-db-client:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "news-api-client"
+  "defaultProject": "movie-db-client"
 }

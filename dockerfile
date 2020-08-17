@@ -6,4 +6,4 @@ RUN npm install
 RUN npm run build --prod
 
 FROM nginx:1.17.0-alpine
-COPY --from=build-statge /usr/src/app/dist/news-api-client /usr/share/nginx/html
+COPY --from=build-statge /usr/src/app/dist/movie-db-client /usr/share/nginx/html
